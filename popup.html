@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>API Compare OLD - NEW</title>
+    <script src="popup.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            width: 420px;
+        }
+
+        button {
+            padding: 5px;
+            margin: 5px;
+            border-radius: 3px;
+            cursor: pointer;
+            background-color: #0e78d5;
+            color: white;
+            outline: none;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #00529b;
+        }
+
+        input {
+            width: 300px;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 3px;
+            outline: none;
+            border: 1px solid #ccc;
+        }
+
+        h3 {
+            margin-top: 20px;
+
+        }
+
+        .field {
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 3px;
+        }
+
+        .missing {
+            background-color: #ffe6e6;
+            color: #b30000;
+        }
+
+        .extra {
+            background-color: #e6f7ff;
+            color: #00529b;
+        }
+
+        .mismatch {
+            background-color: #fff8e6;
+            color: #e68a00;
+        }
+
+        #results {
+            height: 400px;
+            overflow-y: auto;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 3px;
+            outline: none;
+            border: 1px solid #ccc;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>API Compare OLD - NEW</h1>
+    <input id="api-input" type="text" placeholder="http://10.10.14.4:11061/api/v1/board/3/notice?" />
+    <button id="send-api">Send API</button>
+    <ul id="responses-list"></ul>
+    <div id="results"></div>
+    <div id="loading-spinner" style="display: none;">
+        <img src="loading.gif" alt="Loading..." style="width: 100px; height: 100px;" />
+    </div>
+    <div id="btn-container"></div>
+    <div id="content-json">
+        <h3 id="content-json-title">Content JSON</h3>
+        <textarea id="content-json-text" rows="10"></textarea>
+    </div>
+</body>
+
+</html>
