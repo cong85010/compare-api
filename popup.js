@@ -58,7 +58,7 @@ document.getElementById("send-api").addEventListener("click", () => {
         const { method, headers } = response.requestDetails;
   
         // Fetch data from two hosts
-        const hosts = ["http://10.10.14.4:11061", "http://10.10.14.4:11062"];
+        const hosts = ["link-1", "link-2"];
         clearData()
 
         const url = apiInput.split(hosts[0])[1];
