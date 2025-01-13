@@ -13,6 +13,9 @@ Clone this repository to your local machine using Git:
 git clone hhttps://github.com/cong85010/compare-api
 ```
 
+- update code -> const hosts = ["link-1", "link-2"]; 
+- your link
+
 ### Step 2: Enabled Dev tool in Extention
 
 ```bash
