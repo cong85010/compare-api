@@ -28,7 +28,11 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     console.log('==========message.action====', message.action);
     if (message.action === "fetchAPI" && message.apiUrl) {
-        const apiInput = capturedRequests.find((request) => request.url === message.apiUrl);
+
+        console.log('====================================');
+        console.log('capturedRequests', capturedRequests);
+        console.log('====================================');
+        const apiInput = capturedRequests.find((request) => request.url.trim() === message.apiUrl.trim());
 
         if (!apiInput) {
             sendResponse({ error: "Reload page and try again." });
